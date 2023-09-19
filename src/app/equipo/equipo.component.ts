@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipoComponent implements OnInit{
   nombre:string='Novatos';
-  status:boolean=true;
+  estatus:boolean=false;
   jugador:string='Desconocido';
   constructor(){}
   ngOnInit(): void {
@@ -19,5 +19,9 @@ export class EquipoComponent implements OnInit{
     jugador ='Iván';
 
     this.jugador = jugador;
+  }
+
+  actualizarEstado(event:any){
+    this.estatus = event;
   }
 }

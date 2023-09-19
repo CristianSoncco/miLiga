@@ -1,2 +1,23 @@
 <p>Nombre del equipo: {{nombre}}</p>
-<app-jugador [nombre]="jugador" [equipoNombre]="nombre"></app-jugador>
+
+<mat-divider></mat-divider>
+
+<h2>Jugadores</h2>
+
+<mat-accordion class="jugadores-header-align">
+  <mat-expansion-panel hidenToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{jugador}}
+      </mat-panel-title>
+      <mat-panel-description>
+        Delantero {{estatus}}
+        <mat-icon>account_circle</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Estado:</p>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<mat-divider></mat-divider>
+<app-jugador [nombre]="jugador" [equipoNombre]="nombre" (onActivate)="actualizarEstado($event)"></app-jugador>
