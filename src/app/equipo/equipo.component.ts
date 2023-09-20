@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Jugador } from '../_interface/jugador';
 
 @Component({
   selector: 'app-equipo',
@@ -8,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class EquipoComponent implements OnInit{
   nombre:string='Novatos';
   estatus:boolean=false;
-  jugador:string='Desconocido';
+  // jugador:string='Desconocido';
+  jugador:Jugador={
+    nombre:'Sergio',
+    edad:35,
+    apodo:'Apodiño',
+    foto:'imagen.jpg',
+    posicion:'Delantero',
+    estado:false
+  }
+
+
   constructor(){}
   ngOnInit(): void {
     this.nombre='Piratas';
@@ -18,10 +29,10 @@ export class EquipoComponent implements OnInit{
     let jugador = 'Sergio';
     jugador ='Iván';
 
-    this.jugador = jugador;
+    this.jugador.nombre = jugador;
   }
 
   actualizarEstado(event:any){
-    this.estatus = event;
+    this.jugador.estado = event;
   }
 }

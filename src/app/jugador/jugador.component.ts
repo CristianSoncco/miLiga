@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Jugador } from '../_interface/jugador';
 
 @Component({
   selector: 'app-jugador',
@@ -7,8 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class JugadorComponent implements OnInit{
 
-  @Input('nombre')
-  jugador:string='Sergio';
+  @Input()
+  jugador:Jugador={nombre:'sin nombre',edad:33,apodo:'charrito',foto:'madre.jpg',posicion:'CasiDelantero',estado:true};
+  //jugador:string='Sergio';
   @Input()
   equipoNombre:string='Sin equipo';
 
