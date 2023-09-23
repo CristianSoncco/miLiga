@@ -16,12 +16,14 @@ import {MatCardModule} from '@angular/material/card';
 import { JuegoComponent } from './juego/juego.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { JugadorComponent } from './jugador/jugador.component';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
     JuegoComponent,
     EquipoComponent,
-    JugadorComponent
+    JugadorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

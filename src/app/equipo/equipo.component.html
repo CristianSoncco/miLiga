@@ -20,4 +20,4 @@
 </mat-accordion>
 
 <mat-divider></mat-divider>
-<app-jugador [jugador]="jugador" [equipoNombre]="nombre" (onActivate)="actualizarEstado($event)"></app-jugador>
+<app-jugador *ngFor="let item of jugadores;let i = index" [jugador]="item" [equipoNombre]="nombre" (onActivate)="actualizarEstado($event)"></app-jugador>

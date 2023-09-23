@@ -1,0 +1,82 @@
+[
+    {
+      "nombre": "Juan Pérez",
+      "edad": 25,
+      "apodo": "Juani",
+      "foto": "juani.jpg",
+      "posicion": "Delantero",
+      "estado": true
+    },
+    {
+      "nombre": "María González",
+      "edad": 22,
+      "apodo": "Mary",
+      "foto": "mary.jpg",
+      "posicion": "Centrocampista",
+      "estado": true
+    },
+    {
+      "nombre": "Luis Rodríguez",
+      "edad": 28,
+      "apodo": "Lucho",
+      "foto": "lucho.jpg",
+      "posicion": "Defensor",
+      "estado": true
+    },
+    {
+      "nombre": "Ana Martínez",
+      "edad": 24,
+      "apodo": "Anita",
+      "foto": "anita.jpg",
+      "posicion": "Portera",
+      "estado": true
+    },
+    {
+      "nombre": "Carlos Sánchez",
+      "edad": 30,
+      "apodo": "Carlitos",
+      "foto": "carlitos.jpg",
+      "posicion": "Centrocampista",
+      "estado": true
+    },
+    {
+      "nombre": "Laura Pérez",
+      "edad": 26,
+      "apodo": "Lau",
+      "foto": "lau.jpg",
+      "posicion": "Defensor",
+      "estado": true
+    },
+    {
+      "nombre": "Javier García",
+      "edad": 29,
+      "apodo": "Javi",
+      "foto": "javi.jpg",
+      "posicion": "Delantero",
+      "estado": true
+    },
+    {
+      "nombre": "Carmen López",
+      "edad": 27,
+      "apodo": "Carmencita",
+      "foto": "carmen.jpg",
+      "posicion": "Portera",
+      "estado": true
+    },
+    {
+      "nombre": "Daniel Torres",
+      "edad": 26,
+      "apodo": "Dani",
+      "foto": "dani.jpg",
+      "posicion": "Centrocampista",
+      "estado": true
+    },
+    {
+      "nombre": "Sofía Ramírez",
+      "edad": 23,
+      "apodo": "Sofi",
+      "foto": "sofi.jpg",
+      "posicion": "Defensor",
+      "estado": true
+    }
+  ]

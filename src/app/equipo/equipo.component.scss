@@ -1,3 +1,9 @@
-.jugadores-header-align{
+.jugadores-headers-align .mat-expansion-panel-header-title,
+.jugadores-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
 
+.jugadores-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
 }
