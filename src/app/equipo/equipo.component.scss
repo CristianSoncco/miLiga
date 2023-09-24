@@ -7,3 +7,11 @@
   justify-content: space-between;
   align-items: center;
 }
+:host ::ng-deep .mat-grid-tile .mat-figure {
+  align-items: unset !important;
+  padding: 20px;
+}
+
+.player-list {
+  overflow: scroll;
+}

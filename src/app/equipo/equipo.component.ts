@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Jugador } from '../_interface/jugador';
 import * as JUGADORES from 'src/assets/data/jugadores.json'
 import * as EQUIPOS from 'src/assets/data/equipos.json'
+import { Equipo } from '../_interface/equipo';
 
 @Component({
   selector: 'app-equipo',
@@ -14,6 +15,7 @@ export class EquipoComponent implements OnInit{
   // jugador:string='Desconocido';
 
   jugadores:Jugador[] = [];
+  equipos:Equipo[] = [];
 
   jugador:Jugador={
     nombre:'Sergio',
@@ -24,11 +26,14 @@ export class EquipoComponent implements OnInit{
     estado:false
   }
 
+  step = 0;
+
 
   constructor(){}
   ngOnInit(): void {
     this.nombre='Piratas';
     this.jugadores = JUGADORES.default as any;
+    this.equipos = EQUIPOS.default as any;
   }
 
   agregarJugador(){
@@ -38,7 +43,27 @@ export class EquipoComponent implements OnInit{
     this.jugador.nombre = jugador;
   }
 
-  actualizarEstado(event:any){
-    this.jugador.estado = event;
+  actualizarEstado(jugador:Jugador,i:number,event:any){
+    jugador.estado = event;
+    this.step=i;
   }
+
+  activarJugador(jugador:Jugador){
+    jugador.estado=true;
+  }
+
+  mostrarDatos(i:number){
+    this.step=i;
+  }
+
+  obtenerColor(state: boolean){
+    let color = 'green'
+    if (state) {
+      color = 'blue'
+    }else {
+      color='red'
+    }
+    return color;
+  }
+
 }

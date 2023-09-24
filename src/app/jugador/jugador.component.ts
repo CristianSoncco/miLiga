@@ -22,8 +22,8 @@ export class JugadorComponent implements OnInit{
   ngOnInit()
   {}
 
-  activarJugador(){
-    this.estado.emit(true);
+  desactivar() {
+    this.estado.emit(false);
   }
 
 }

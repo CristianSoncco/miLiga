@@ -4,13 +4,9 @@
     <mat-card-title>{{jugador.nombre}}</mat-card-title>
     <mat-card-subtitle>{{equipoNombre}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="{{jugador.foto}}" alt="">
+  <img mat-card-image src="{{jugador.foto}}">
 
   <mat-card-actions align="end">
-    <button mat-button color="primary" (click)="activarJugador()">Activar</button>
+    <button mat-button color="primary" (click)="desactivar()" [disabled]="!jugador.estado">Desactivar</button>
   </mat-card-actions>
 </mat-card>
-
-<p>El jugador es:{{jugador.nombre}}
-  y es parte del equipo: {{equipoNombre}}
-</p>
