@@ -1,8 +1,11 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+
+
 
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -12,19 +15,22 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
-
+import {MatFormFieldModule} from '@angular/material/form-field'
+import {MatInputModule} from '@angular/material/input'
 
 import { JuegoComponent } from './juego/juego.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { JugadorComponent } from './jugador/jugador.component';
 import { LoginComponent } from './login/login.component';
+import { FiltroPorLetraPipe } from './_pipe/filtro-por-letra.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     JuegoComponent,
     EquipoComponent,
     JugadorComponent,
-    LoginComponent
+    LoginComponent,
+    FiltroPorLetraPipe
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,10 @@ import { LoginComponent } from './login/login.component';
     MatExpansionModule,
     MatIconModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

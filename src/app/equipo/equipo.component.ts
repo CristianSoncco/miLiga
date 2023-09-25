@@ -29,7 +29,11 @@ export class EquipoComponent implements OnInit{
   step = 0;
   presupuesto = 18000000;
   actualizacion = new Date();
-  
+  aficionados = 1500320.2345;
+  efectividad = 0.87325767546;
+
+  busqueda = '';
+
   constructor(){}
   ngOnInit(): void {
     this.nombre='Piratas';
