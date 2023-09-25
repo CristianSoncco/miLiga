@@ -27,7 +27,7 @@ export class EquipoComponent implements OnInit{
   }
 
   step = 0;
-
+  presupuesto = 18000000;
 
   constructor(){}
   ngOnInit(): void {

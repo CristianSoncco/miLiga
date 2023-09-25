@@ -1,7 +1,8 @@
 <p>Nombre del equipo: {{nombre}}</p>
 
 <mat-divider></mat-divider>
-
+<p>Presupuesto: {{ presupuesto | currency }} </p>
+<mat-divider></mat-divider>
 <h2>Jugadores</h2>
 
 <mat-grid-list cols="4" rowHeight="400" style="padding:10px" *ngIf="jugadores.length>0 else noData">
