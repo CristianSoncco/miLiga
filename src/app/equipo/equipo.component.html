@@ -28,7 +28,7 @@
     </mat-accordion>
   </mat-grid-tile>
   <mat-grid-tile *ngFor="let j of jugadores; let i = index">
-    <app-jugador [jugador]="j" [equipoNombre]="nombre" (onActivate)="actualizarEstado(j, i, $event)" (click)="mostrarDatos(i)"></app-jugador>
+    <app-jugador [ngClass]="{'jugadorInactivo':!j.estado, 'jugadorActivo':j.estado}" [jugador]="j" [equipoNombre]="nombre" (onActivate)="actualizarEstado(j, i, $event)" (click)="mostrarDatos(i)"></app-jugador>
   </mat-grid-tile>
 </mat-grid-list>
 
