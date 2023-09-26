@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { FiltroPorLetraPipe } from './_pipe/filtro-por-letra.pipe';
 
 import { JugadoresService } from './_services/jugadores.service';
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { JugadoresService } from './_services/jugadores.service';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AppRoutingModule
   ],
   providers: [JugadoresService],
   bootstrap: [AppComponent]
