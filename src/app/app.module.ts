@@ -17,12 +17,16 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
+import {HttpClientModule} from '@angular/common/http'
+import { MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 import { JuegoComponent } from './juego/juego.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { JugadorComponent } from './jugador/jugador.component';
 import { LoginComponent } from './login/login.component';
 import { FiltroPorLetraPipe } from './_pipe/filtro-por-letra.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +39,7 @@ import { FiltroPorLetraPipe } from './_pipe/filtro-por-letra.pipe';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatDividerModule,
@@ -44,7 +49,8 @@ import { FiltroPorLetraPipe } from './_pipe/filtro-por-letra.pipe';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

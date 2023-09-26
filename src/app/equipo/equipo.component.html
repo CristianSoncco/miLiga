@@ -63,6 +63,9 @@
 
 <ng-template #noData>
   <div class="mat-elevation-z8 noData">
-    <h2>No hay registros disponibles</h2>
+    <mat-spinner *ngIf="isLoading" class="spinner"></mat-spinner>
+    <h2 *ngIf="isLoading">Cargando datos</h2>
+
+    <h2 *ngIf="!isLoading">No hay registros disponibles</h2>
   </div>
 </ng-template>
