@@ -26,7 +26,7 @@ import { JugadorComponent } from './jugador/jugador.component';
 import { LoginComponent } from './login/login.component';
 import { FiltroPorLetraPipe } from './_pipe/filtro-por-letra.pipe';
 
-
+import { JugadoresService } from './_services/jugadores.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +52,7 @@ import { FiltroPorLetraPipe } from './_pipe/filtro-por-letra.pipe';
     FormsModule,
     MatProgressSpinnerModule
   ],
-  providers: [],
+  providers: [JugadoresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

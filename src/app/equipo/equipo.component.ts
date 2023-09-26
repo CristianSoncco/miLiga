@@ -4,6 +4,8 @@ import * as JUGADORES from 'src/assets/data/jugadores.json'
 import * as EQUIPOS from 'src/assets/data/equipos.json'
 import { Equipo } from '../_interface/equipo';
 import { HttpClient} from '@angular/common/http'
+import { JugadoresService } from '../_services/jugadores.service';
+
 @Component({
   selector: 'app-equipo',
   templateUrl: './equipo.component.html',
@@ -35,7 +37,7 @@ export class EquipoComponent implements OnInit{
   busqueda = '';
   isLoading=false;
 
-  constructor(private http:HttpClient){
+  constructor( private jugadorService:JugadoresService){
 
   }
   ngOnInit(): void {
@@ -48,13 +50,9 @@ export class EquipoComponent implements OnInit{
 
 obtenerJugadores(){
   this.isLoading =true;
-  this.http.get('https://localhost:7002/Jugador')
-  .subscribe(jugadores =>{
-    console.log(jugadores as any);
-    this.jugadores=jugadores as Jugador[];
-    this.isLoading =false;
-  },error=>{
-    console.log(error);
+  this.jugadorService.obtener().subscribe((jugadores) => {
+    this.jugadores = jugadores as Jugador[];
+    this.isLoading=false;
   })
 }
 
